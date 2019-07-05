@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "noticias",
+  "info": {
+    "name": "noticias",
+    "description": "FINTUU Noticias"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "categorias": {
+      "enum": [
+        "noticias",
+        "boletines"
+      ],
+      "type": "enumeration"
+    }
+  }
+}
